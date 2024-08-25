@@ -6,7 +6,8 @@ import { AppRegistry } from 'react-native';
 import App from './App';
 import { name as appName } from './app.json';
 import {
-    DetailsCardScreen
+    EditWorkspaceScreen
 } from './src/screens';
+import test from './test';
 import 'react-native-gesture-handler';
 AppRegistry.registerComponent(appName, () => App);

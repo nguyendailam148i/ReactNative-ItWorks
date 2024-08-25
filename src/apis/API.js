@@ -186,7 +186,17 @@ export const createNewWorkspaceAPI = async (workspaceData) => {
 };
 
 export const updateWorkspaceAPI = async (newData) => {
-  const response = await axios.post(`${API_ROOT}/v1/workspaces/update`, newData);
+  const accessToken = await AsyncStorage.getItem('userToken');
+  if (!accessToken) {
+    throw new Error('No access token found');
+  }
+
+  const response = await axios.post(`${API_ROOT}/v1/workspaces/update`, newData, {
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+
   return response.data;
 };
 

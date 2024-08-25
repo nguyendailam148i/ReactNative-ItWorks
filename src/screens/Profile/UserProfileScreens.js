@@ -8,8 +8,8 @@ import {
     Modal,
     ScrollView,
 } from 'react-native';
-import { COLORS, FontSize } from '../constants';
-import { UIButton, UIInput, UILoader } from '../components';
+import { COLORS, FontSize } from '../../constants';
+import { UIButton, UIInput, UILoader } from '../../components';
 
 const UserProfileScreens = () => {
     return (

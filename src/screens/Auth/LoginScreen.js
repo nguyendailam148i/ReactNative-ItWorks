@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, SafeAreaView, Keyboard, Alert } from 'react-native';
-import { COLORS, FontSize } from '../constants';
-import { UIButton, UIInput, UILoader } from '../components';
+import { COLORS, FontSize } from '../../constants';
+import { UIButton, UIInput, UILoader } from '../../components';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { loginApi } from '../apis/API';
+import { loginApi } from '../../apis/API';
 
 const LoginScreen = ({ navigation }) => {
   const [inputs, setInputs] = React.useState({ email: '', password: '' });

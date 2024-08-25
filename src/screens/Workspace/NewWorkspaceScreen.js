@@ -68,7 +68,6 @@ const NewWorkspaceScreen = ({ route, navigation }) => {
                 navigation.navigate('BroadsScreen', {
                     workspaceId: response.workspaceId,
                     workspaceTitle: title,
-                    refreshWorkspaces: fetchWorkspaces,
                 });
                 route.params?.onWorkspaceCreated?.();
             } else {
@@ -82,21 +81,7 @@ const NewWorkspaceScreen = ({ route, navigation }) => {
         }
     };
 
-    const fetchWorkspaces = async () => {
-        try {
-            const accessToken = await AsyncStorage.getItem('userToken');
-            const response = await getUser({
-                headers: {
-                    Authorization: `Bearer ${accessToken}`,
-                },
-            });
-            console.log('API Response:', response);
 
-        } catch (error) {
-            console.error('Error fetching workspaces:', error);
-            console.log('Full error object:', error);
-        }
-    };
 
     const handleSubmit = () => {
         // Đảm bảo không có vòng lặp khi submit
@@ -119,7 +104,7 @@ const NewWorkspaceScreen = ({ route, navigation }) => {
                 <UIInput
                     iconName="border-color"
                     label="Description"
-                    placeholder="Enter your description"
+                    placeholder={description}
                     value={description}
                     onChangeText={setDescription}
                 />
@@ -134,6 +119,7 @@ const NewWorkspaceScreen = ({ route, navigation }) => {
                         ]}
                         placeholder={{ label: "Select TYPE", value: null }}
                         value={workspaceType}
+                        useNativeAndroidPickerStyle={false}
                     />
                 </View>
 

@@ -9,9 +9,9 @@ import {
   Alert,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { APIRegister } from '../apis/API';
-import { COLORS, FontSize } from '../constants';
-import { UIButton, UIInput, UILoader } from '../components';
+import { APIRegister } from '../../apis/API';
+import { COLORS, FontSize } from '../../constants';
+import { UIButton, UIInput, UILoader } from '../../components';
 
 const RegistrationScreen = ({ navigation }) => {
   const [inputs, setInputs] = React.useState({

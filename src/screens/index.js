@@ -1,12 +1,14 @@
-import LoginScreen from './LoginScreen';
-import HomeScreen from './HomeScreen';
-import RegistrationScreen from './RegistrationScreen';
-import ForgotScreen from './ForgotScreen';
-import UserProfileScreens from './UserProfileScreens';
+
+import LoginScreen from './Auth/LoginScreen';
+import HomeScreen from './Home/HomeScreen';
+import RegistrationScreen from './Auth/RegistrationScreen';
+import ForgotScreen from './Auth/ForgotScreen';
+import UserProfileScreens from './Profile/UserProfileScreens';
 import NewWorkspaceScreen from './Broads/NewWorkspaceScreen';
 import BroadsScreen from './Broads/BroadsScreen';
 import DetailsBroadScreen from './Broads/DetailsBroadScreen';
 import DetailsCardScreen from './Broads/DetailsCardScreen';
+import EditWorkspaceScreen from './Workspace/EditWorkspaceScreen';
 //rnfe
 export {
     LoginScreen,
@@ -17,5 +19,6 @@ export {
     NewWorkspaceScreen,
     BroadsScreen,
     DetailsBroadScreen,
-    DetailsCardScreen
+    DetailsCardScreen,
+    EditWorkspaceScreen
 };

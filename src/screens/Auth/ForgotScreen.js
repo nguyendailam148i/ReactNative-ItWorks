@@ -7,10 +7,10 @@ import {
   Alert,
   ActivityIndicator,
 } from 'react-native';
-import { COLORS, FontSize } from '../constants';
-import { UIButton, UIInput } from '../components';
+import { COLORS, FontSize } from '../../constants';
+import { UIButton, UIInput } from '../../components';
+import { APIForgot } from '../../apis/API'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { APIForgot } from '../apis/API';
 
 const ForgotScreen = ({ navigation }) => {
   const [inputs, setInputs] = React.useState({

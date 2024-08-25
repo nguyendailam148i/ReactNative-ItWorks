@@ -1,6 +1,6 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { LoginScreen, RegistrationScreen, ForgotScreen, UserProfileScreens, NewWorkspaceScreen, BroadsScreen, DetailsBroadScreen, DetailsCardScreen } from '../screens';
+import { LoginScreen, RegistrationScreen, ForgotScreen, UserProfileScreens, NewWorkspaceScreen, BroadsScreen, DetailsBroadScreen, DetailsCardScreen, EditWorkspaceScreen } from '../screens';
 import { UILoader } from '../components';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import DrawerNavigator from './DrawerNavigator';
@@ -38,6 +38,7 @@ const StackNavigator = () => {
                     <Stack.Screen name="ForgotScreen" component={ForgotScreen} options={{ headerShown: false }} />
                     <Stack.Screen name="UserProfileScreens" component={UserProfileScreens} options={{ title: 'Profile' }} />
                     <Stack.Screen name="NewWorkspaceScreen" component={NewWorkspaceScreen} options={{ title: 'New Workspaces' }} />
+                    <Stack.Screen name="EditWorkspaceScreen" component={EditWorkspaceScreen} options={{ title: 'EditWorkspaceScreen' }} />
                     <Stack.Screen name="BroadsScreen" component={BroadsScreen} options={{ headerShown: true }} />
                     <Stack.Screen name="DetailsBroadScreen" component={DetailsBroadScreen} options={{ headerShown: true }} />
                     <Stack.Screen name="DetailsCardScreen" component={DetailsCardScreen} options={{ headerShown: false }} />
